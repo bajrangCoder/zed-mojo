@@ -1,0 +1,12 @@
+[package]
+name = "zed-mojo"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+
+[lib]
+path = "src/mojo.rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+zed_extension_api = "0.1.0"

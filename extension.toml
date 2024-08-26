@@ -1,0 +1,15 @@
+id = "mojo"
+name = "Mojo"
+description = "Mojo Language Support"
+version = "0.0.1"
+schema_version = 1
+authors = ["Raunak Raj <bajrangcoders@gmail.com>"]
+repository = "https://github.com/bajrangCoder/zed-mojo"
+
+[grammars.mojo]
+repository = "https://github.com/lsh/tree-sitter-mojo"
+commit = "fb231abd48a6fa59db32e143ab7624cc97c75fd8"
+
+[language_servers.mojo]
+name = "Mojo LSP"
+language = "Mojo"
