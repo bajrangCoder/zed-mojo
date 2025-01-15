@@ -1,18 +1,24 @@
 # Zed Mojo
 
-Mojo language support for Zed. It provides syntax highlighting and lsp.
+A Zed extension to provide Mojo language support with syntax highlighting and LSP integration.
 
-## Grammar
+## Features
 
-- [tree-sitter-mojo](https://github.com/lsh/tree-sitter-mojo/)
+- Syntax highlighting via tree-sitter
+- Language Server Protocol (LSP) support
 
-## Feedback
+## Installation
 
-Provide your feedback to improve this extension as I don't use mojo language.
+1. Install the [Magic Package Manager](https://developer.modular.com/download)
+2. Clone this repository
+3. Open Zed and click "Install Dev Extension" from the extensions page
+4. Select the cloned repository
 
-## Settings
+## Configuration
 
-You can configure the lsp by changing the zed settings
+### LSP Settings
+
+Configure the Language Server Protocol in your Zed settings:
 
 ```json
 {
@@ -27,11 +33,32 @@ You can configure the lsp by changing the zed settings
 }
 ```
 
-## Installation
+### Formatter Settings
 
-- First install the Magic Package Manager from https://developer.modular.com/download
-- Clone this repository.
-- From zed extension page click "Install Dev Extension" and select the cloned repository.
+Enable formatting by adding following in zed setting :
+
+```json
+{
+  "languages": {
+    "mojo": {
+      "formatter": {
+        "external": {
+          "command": "magic",
+          "arguments": ["run", "mojo", "format", "-q", "-"]
+        }
+      }
+    }
+  }
+}
+```
+
+## Grammar
+
+The extension uses [tree-sitter-mojo](https://github.com/lsh/tree-sitter-mojo/) for syntax highlighting.
+
+## Contributing
+
+Feedback and contributions are welcome! Please share your suggestions to help improve this extension.
 
 > [!NOTE]
 > The [Magic](https://docs.modular.com/magic/) Package Manager is required for the LSP functionality to work properly.
