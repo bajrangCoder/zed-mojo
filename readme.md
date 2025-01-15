@@ -20,7 +20,7 @@ You can configure the lsp by changing the zed settings
     "mojo": {
       "settings": {
         "lsp_path": "/name/my-proj/.magic/envs/default/bin/mojo-lsp-server", // path to mojo-lsp-server
-        "args": ["--log=verbose"] // additional args for mojo-lsp-server
+        "args": ["--log=verbose"] // additional args
       }
     }
   },
@@ -29,7 +29,12 @@ You can configure the lsp by changing the zed settings
 
 ## Installation
 
+- First install the Magic Package Manager from https://developer.modular.com/download
 - Clone this repository.
 - From zed extension page click "Install Dev Extension" and select the cloned repository.
 
-> Note: This extension is not published to zed extension store. As this isn't stable and it isn't complete.
+> [!NOTE]
+> The [Magic](https://docs.modular.com/magic/) Package Manager is required for the LSP functionality to work properly.
+
+> [!WARNING]
+> This extension is not published to zed extension store, as it isn't stable and isn't completed yet.

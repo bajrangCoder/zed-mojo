@@ -14,7 +14,7 @@ impl zed::Extension for MojoExtension {
     ) -> Result<zed::Command> {
         let settings = LspSettings::for_worktree(language_server_id.as_ref(), worktree)?;
 
-        let error_message = "Must install `mojo-lsp-server` [via Modular](https://developer.modular.com/download), its comes with mojo package";
+        let error_message = "Must install `magic (mojo-lsp-server)` package manager of mojo language server or provide the path to the mojo-lsp-server binary in the settings";
 
         let settings_clone = settings.settings.clone();
         let mojo_binary_path = settings_clone
@@ -25,7 +25,7 @@ impl zed::Extension for MojoExtension {
             })
             .unwrap_or_else(|| {
                 worktree
-                    .which("mojo-lsp-server")
+                    .which("magic")
                     .ok_or_else(|| error_message.to_string())
                     .unwrap()
             });
@@ -40,7 +40,7 @@ impl zed::Extension for MojoExtension {
                         .collect()
                 })
             })
-            .unwrap_or_default();
+            .unwrap_or_else(|| vec![String::from("run"), String::from("mojo-lsp-server")]);
 
         Ok(zed::Command {
             command: mojo_binary_path.to_string(),
