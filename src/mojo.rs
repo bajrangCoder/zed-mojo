@@ -14,7 +14,7 @@ impl zed::Extension for MojoExtension {
     ) -> Result<zed::Command> {
         let settings = LspSettings::for_worktree(language_server_id.as_ref(), worktree)?;
 
-        let error_message = "Must install `magic (mojo-lsp-server)` package manager of mojo language server or provide the path to the mojo-lsp-server binary in the settings";
+        let error_message = "Must install `magic (mojo-lsp-server)` package manager of mojo language or provide the path to the mojo-lsp-server binary in the settings";
 
         let settings_clone = settings.settings.clone();
         let mojo_binary_path = settings_clone

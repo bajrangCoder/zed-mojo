@@ -8,7 +8,7 @@ repository = "https://github.com/bajrangCoder/zed-mojo"
 
 [grammars.mojo]
 repository = "https://github.com/lsh/tree-sitter-mojo"
-commit = "fb231abd48a6fa59db32e143ab7624cc97c75fd8"
+commit = "564d5a8489e20e5f723020ae40308888699055c0"
 
 [language_servers.mojo]
 name = "Mojo LSP"

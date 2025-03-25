@@ -4,7 +4,8 @@ A Zed extension to provide Mojo language support with syntax highlighting and LS
 
 ## Features
 
-- Syntax highlighting via tree-sitter
+- Syntax highlighting
+- Outlines
 - Language Server Protocol (LSP) support
 
 ## Installation
@@ -62,6 +63,3 @@ Feedback and contributions are welcome! Please share your suggestions to help im
 
 > [!NOTE]
 > The [Magic](https://docs.modular.com/magic/) Package Manager is required for the LSP functionality to work properly.
-
-> [!WARNING]
-> This extension is not published to zed extension store, as it isn't stable and isn't completed yet.
